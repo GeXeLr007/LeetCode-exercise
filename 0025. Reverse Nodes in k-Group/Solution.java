@@ -14,7 +14,9 @@ public class Solution {
     }
     
     
-
+//可以用begin，end，endnext作为变量名
+//    https://soulmachine.gitbooks.io/algorithm-essentials/content/java/linear-list/linked-list/reverse-nodes-in-k-group.html
+//    递归法暂时功力不够看不懂
     public static ListNode reverseKGroup(ListNode head, int k) {
         ListNode dummy = new ListNode(0);
         dummy.next = head;
@@ -33,6 +35,7 @@ public class Solution {
                 ListNode n1 = null;
                 ListNode n2 = pre.next;
                 for (int i = 0; i < k; i++) {
+                    // n3要在循环体的第一句，不然会空指针异常
                     ListNode n3 = n2.next;
                     n2.next = n1;
                     n1 = n2;
