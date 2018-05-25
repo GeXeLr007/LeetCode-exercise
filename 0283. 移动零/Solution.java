@@ -18,7 +18,19 @@ public class Solution {
 
     }
 
-   
+//    双指针，前一个指针指向需要覆盖的下标，后一个指针遍历所有下标
+    public void moveZeroes(int[] nums) {
+        int k=0;
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i]!=0){
+                nums[k]=nums[i];
+                k++;
+            }
+        }
+        for (int i = k; i < nums.length; i++) {
+            nums[i]=0;
+        }
+    }
 
    
 
