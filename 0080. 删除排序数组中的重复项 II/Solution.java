@@ -19,7 +19,24 @@ public class Solution {
 
     }
 
-    
-    
+    //    cnt变量用来记录复制几个重复元素了
+    public int removeDuplicates(int[] nums) {
+        int k = 1, cnt = 1;
+        for (int i = 1; i < nums.length; i++) {
+            if (nums[i] == nums[k - 1]) {
+                if (cnt < 2) {
+                    nums[k] = nums[k - 1];
+                    k++;
+                    cnt++;
+                }
+            } else {
+                cnt = 0;
+                nums[k] = nums[i];
+                k++;
+                cnt++;
+            }
+        }
+        return k;
+    }
 
 }
