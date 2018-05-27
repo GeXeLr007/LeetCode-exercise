@@ -7,9 +7,10 @@ public class Solution {
 
     public static void main(String[] args) {
 
-        int[] arr = {0, 0, 1, 1, 1, 1, 2, 3, 3};
+        int[] arr1 = {1, 2, 4, 5, 6, 0};
+        int[] arr2 = {3};
         Solution solution = new Solution();
-        solution.removeDuplicates(arr);
+        solution.merge(arr1, 5, arr2, 1);
 
 //        int[] arr2 = {1, 3, 4};
 //        ListNode listNode = new ListNode(arr);
@@ -19,7 +20,6 @@ public class Solution {
 
     }
 
-    
     
 
 }
