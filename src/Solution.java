@@ -7,7 +7,7 @@ public class Solution {
         int[] arr1 = {2, 3, 1, 2, 4, 3};
         int[] arr2 = {3};
         Solution solution = new Solution();
-        System.out.println(solution.lengthOfLongestSubstring("pwwkew"));
+        System.out.println(solution.minWindow("ADOBECODEBANC", "ABC"));
 
 //        int[] arr2 = {1, 3, 4};
 //        ListNode listNode = new ListNode(arr);
@@ -19,5 +19,6 @@ public class Solution {
 
     
     
+   
 
 }
