@@ -17,16 +17,16 @@ public class Solution {
 
     }
 
-//    使用hash表
+    //    使用hash表，边扫描加入元素边检验
     public int[] twoSum(int[] numbers, int target) {
         HashMap<Integer, Integer> map = new HashMap<>();
         for (int i = 0; i < numbers.length; i++) {
-            map.put(numbers[i], i);
-        }
-        for (int i = 0; i < numbers.length; i++) {
-            Integer v = map.get(target - numbers[i]);
-            if (v != null && v > i) {
-                return new int[]{i , v};
+            if (map.containsKey(target - numbers[i])) {
+                Integer index1 = map.get(target - numbers[i]);
+                Integer index2 = i;
+                return new int[]{index1, index2};
+            } else {
+                map.put(numbers[i], i);
             }
         }
         return null;

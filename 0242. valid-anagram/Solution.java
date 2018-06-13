@@ -17,10 +17,9 @@ public class Solution {
 
     }
 
-    
     public boolean isAnagram(String s, String t) {
 //        先判断字符串长度是否相等，这是大前提
-        if (s.length()!=t.length()){
+        if (s.length() != t.length()) {
             return false;
         }
         int[] book = new int[300];
