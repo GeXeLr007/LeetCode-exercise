@@ -17,13 +17,11 @@ public class Solution {
 
     }
 
-    
-    public int maxDepth(TreeNode root) {
-        if (root == null) {
-            return 0;
-        }
-//        当前节点的深度为左右子树最大深度+1
-        return Math.max(maxDepth(root.left), maxDepth(root.right)) + 1;
+
+//    不删除节点，只是将节点的值进行覆盖也可以
+    public void deleteNode(ListNode node) {
+        node.val=node.next.val;
+        node.next=node.next.next;
 
     }
 

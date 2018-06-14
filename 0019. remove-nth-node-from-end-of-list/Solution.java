@@ -17,13 +17,20 @@ public class Solution {
 
     }
 
-    
-    public int maxDepth(TreeNode root) {
-        if (root == null) {
-            return 0;
+//    在链表中用双指针维护窗口
+    public ListNode removeNthFromEnd(ListNode head, int n) {
+        ListNode dummy = new ListNode(0);
+        dummy.next = head;
+        ListNode end = dummy, start = dummy;
+        for (int i = 0; i < n; i++) {
+            end = end.next;
         }
-//        当前节点的深度为左右子树最大深度+1
-        return Math.max(maxDepth(root.left), maxDepth(root.right)) + 1;
+        while (end.next != null) {
+            start = start.next;
+            end = end.next;
+        }
+        start.next = start.next.next;
+        return dummy.next;
 
     }
 
